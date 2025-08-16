@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Starter App v2 — Upload + Predict</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>🚀 Starter App v2</h1>
+      <p>Upload a file or type some text — hit Predict to see the demo response.</p>
+
+      <form id="predict-form">
+        <label for="text_input">Text (optional)</label>
+        <textarea id="text_input" name="text_input" rows="4" placeholder="Type something..."></textarea>
+
+        <label for="file_input">File (optional: png/jpg/webp/txt/csv)</label>
+        <input id="file_input" type="file" name="file" accept=".png,.jpg,.jpeg,.webp,.txt,.csv" />
+
+        <button type="submit">Predict</button>
+      </form>
+
+      <div id="result" class="card hidden">
+        <h2>Result</h2>
+        <pre id="result-json"></pre>
+      </div>
+
+      <footer>
+        <span>API available at <code>/api/predict</code> and <code>/predict</code></span>
+      </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
